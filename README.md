@@ -15,7 +15,7 @@
 
    ```elixir
    def deps do
-     [{:ueberauth_gitlab_strategy, "~> 0.4"}]
+     [{:ueberauth_gitlab_strategy, github: "vrcca/ueberauth_gitlab", tag: "0.5.0"}]
    end
    ```
 
