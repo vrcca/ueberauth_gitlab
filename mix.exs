@@ -1,15 +1,15 @@
 defmodule UeberauthGitlab.Mixfile do
   use Mix.Project
 
-  @version "0.4.0"
-  @source_url "https://github.com/mtchavez/ueberauth_gitlab"
+  @version "0.5.0"
+  @source_url "https://github.com/vrcca/ueberauth_gitlab"
 
   def project do
     [
       app: :ueberauth_gitlab_strategy,
       version: @version,
       package: package(),
-      elixir: "~> 1.7",
+      elixir: "~> 1.11",
       build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,
       test_coverage: [tool: ExCoveralls],
@@ -38,7 +38,7 @@ defmodule UeberauthGitlab.Mixfile do
   defp deps do
     [
       {:oauth2, "~> 2.0"},
-      {:ueberauth, "~> 0.7.0"},
+      {:ueberauth, "~> 0.10.0"},
 
       # dev/test only dependencies
       {:credo, "~> 1.0", only: [:dev, :test], runtime: false},
@@ -65,7 +65,7 @@ defmodule UeberauthGitlab.Mixfile do
     [
       name: "ueberauth_gitlab_strategy",
       files: ["lib", "mix.exs", "README*", "LICENSE*", "CHANGELOG.*"],
-      maintainers: ["Chavez"],
+      maintainers: ["vrcca"],
       licenses: ["MIT"],
       links: %{
         Changelog: "#{@source_url}/blob/master/CHANGELOG.md",
